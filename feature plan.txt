@@ -1,0 +1,41 @@
+MAIN SYSTEM: 
+	
+	cronos
+		Either x86 operating system, or some highly optimized GUI that connects all of the 
+		following subsystems
+	
+	ctrl-room/syns (Music+Audio)
+		Using modular synth project as a starting point for developing this
+
+	raylib (Desktop video)
+		raylib display includes option for TEXT or GRAPHICS mode
+		Works on Windows, Linux
+		
+		TEXT_DEBUG:	System runs in debug mode, I/O is through the terminal.
+		TEXT_DEBUG_MEM:	System runs in debug mode, I/O is through the terminal. Display
+				is split in two (terminal, memory). Live memory manipulation,
+				reading, updating. Customizable display, able to show list of
+				ranges from different parts of mem at the same time
+		TEXT_MAIN: 	System runs in 6502 mode, goes through startup sequence 
+				and begins executing code. Input/Output is through the terminal
+				(dimensions/# of lines TBD)
+
+		GRAPHICS_DEBUG_FULL: 	 System runs in debug mode, display is split in 3 
+					 (AV OUT, console, memory). Size and position of subwindows
+					 as well as other configuration is available.
+		GRAPHICS_DEBUG_TERMINAL: System runs in debug mode, display is split in 2
+					 (AV OUT, terminal). Size and position of subwindows
+					 as well as other configuration is available.
+		GRAPHICS_DEBUG_MEM: 	 System runs in debug mode, display is split in 2
+					 (AV OUT, memory). Size and position of subwindows
+					 as well as other configuration is available.
+		GRAPHICS_MAIN:		 Display is only the virtual AV OUT. I/O is through 						 keyboard, mouse, and any other custom mapped devices 						 (configure in mem). Collapsable sidebar with system 						 controls, settings, etc.
+	Arduino (Breadboard Video PHASE 1)
+		Using UNO_GRAPHICS from my CEH-UNO repo
+
+	Interface w/ 6502 System (Breadboard Video PHASE 2/FINAL)	
+		TEXT MODE:
+		GRAPHICS MODE:
+
+	ctrl-6502 (Operating environment)
+		Calls functions from the above libraries to pretend to be a computer from 1974!
